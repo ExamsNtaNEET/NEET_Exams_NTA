@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+/* Top Header Styling */
+.top-header {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.govt-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.govt-info p {
+    margin: 0;
+}
+
+.header-right {
+    padding-right: 20px;
+}
+
+.header-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.header-right ul li {
+    display: inline;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-right ul li a:hover {
+    color: #0047AB;
+}
+
+.header-right ul li a::before {
+    content: '•';
+    padding-right: 5px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #F58220; /* Orange background */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically center the items */
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    flex-grow: 1; /* Ensure it takes up available space */
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    flex-grow: 2; /* Pushes to right */
+}
+
+.navbar .nav-links li {
+    margin: 0 15px; /* Add space between the nav links */
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #0047AB; /* Change background on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+}   
+/* Announcement Bar */
+#announcement .announcement-bar {
+    background-color: #F58220;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% { background-color: #F58220; }
+    50% { background-color: #0047AB; }
+    100% { background-color: #F58220; }
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    width: 175px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Sliding News */
+#latest-news .news ul {
+    overflow: hidden;
+    position: relative;
+}
+
+#latest-news .news ul li {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#latest-news .news ul li.visible {
+    opacity: 1;
+}
+
+/* Scroll to Top Button */
+#scroll-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
+
+#scroll-top-btn:hover {
+    background-color: #F58220;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0047AB;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

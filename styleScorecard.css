@@ -1,0 +1,155 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    border-bottom: 2px solid orange;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img, .header-right img {
+    width: 80px;
+    height: auto;
+}
+
+.header-left .left-text, .header-right .right-text {
+    margin-left: 10px;
+}
+
+.header-left .left-text p, .header-right .right-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.header-center {
+    text-align: center;
+}
+
+.header-center p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-center p:first-child {
+    font-size: 16px;
+    color: black;
+}
+
+.navbar {
+    background-color: orange;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+}
+
+.instruction {
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.dob-fields select {
+    width: 32%;
+    display: inline-block;
+}
+
+.or {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+}
+
+.captcha span {
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: #eee;
+    padding: 5px 10px;
+}
+
+button.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET UG 2024 Score Card</title>
+    <link rel="stylesheet" href="styleScorecard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="./assets/images/logo.png" alt="Ministry of Health and Family Welfare">
+            <div class="left-text">
+                <p>स्वास्थ्य और परिवार कल्याण मंत्रालय</p>
+                <p>Ministry of Health and Family Welfare</p>
+            </div>
+        </div>
+        <div class="header-center">
+            <p>राष्ट्रीय पात्रता सह प्रवेश परीक्षा (स्नातक) - 2024</p>
+            <p>NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) - 2024</p>
+        </div>
+        <div class="header-right">
+            <img src="./assets/images/NTA- Logo.webp" alt="National Testing Agency">
+            <div class="right-text">
+                <p>राष्ट्रीय परीक्षा एजेंसी</p>
+                <p>National Testing Agency</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="https://exams.nta.ac.in/NEET/images/neet-ug-2024-draft-ib-09022024.pdf">Information Bulletin</a></li>
+            <li><a href="https://exams.nta.ac.in/NEET/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>NEET (UG) – 2024</h1>
+        <h3>Score Card (Re-Revised)</h3>
+        
+        <p class="instruction">
+            Please check your photo and QR code on your scorecard. If either the photo or the QR code is missing, kindly re-download it
+        </p>
+
+        <form id="scorecardForm">
+            <div class="form-group">
+                <label for="appNumber">Application No.*</label>
+                <input type="text" id="appNumber" name="appNumber" required placeholder="Application No. cannot be blank.">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth*</label>
+                <div class="dob-fields">
+                    <select id="day" name="day" required>
+                        <option value="">--Day--</option>
+                        <!-- Day options (1 to 31) -->
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+
+                    <select id="month" name="month" required>
+                        <option value="">--Month--</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+
+                    <select id="year" name="year" required>
+                        <option value="">--Year--</option>
+                        <!-- Year options (1990 to 2010) -->
+                        <script>
+                            for (let i = 1990; i <= 2010; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Candidate Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Email Address">
+            </div>
+
+            <div class="or"><p style="color: red;"> Note: Please use Registered mobile number according to admit card!</p></div>
+
+            <div class="form-group">
+                <label for="mobile">Candidate Mobile / Alternate Mobile</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number">
+            </div>
+
+            <div class="form-group">
+                <label for="securityPin">Enter Security Pin (Case Sensitive)*</label>
+                <input type="text" id="securityPin" name="securityPin" required placeholder="Enter Security Pin">
+                <div class="captcha">
+                    <span id="captcha">929901</span>
+                    <button type="button" onclick="refreshCaptcha()">🔄</button>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script src="scriptScorecard.js"></script>
+</body>
+</html>
